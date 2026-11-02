@@ -11458,7 +11458,7 @@ printf 'pwsh:%s' "$1"
             }
             // Crab emoji (🦀) is 4 bytes in UTF-8: F0 9F A6 80
             // Placing it now puts byte 8192 inside it (byte 8189+3=8192 is the 4th byte of the emoji)
-            body.push_str("🦀");
+            body.push('\u{1F980}');
             // Add more content to make it clear we truncated
             body.push_str("extra_content_after_boundary");
 
